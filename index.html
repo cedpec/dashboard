@@ -22,16 +22,8 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body ng-app="dashboard">
-        <div id="wrapper">
 
-          <div ng-include="'templates/header.html'"></div>
-
-          <div ng-include="'templates/leftmenu.html'"></div>
-
-          <div ng-view></div>
-
-          <div ng-include="'templates/footer.html'"></div>
-        </div>
+        <div ui-view></div>
 
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -40,10 +32,14 @@
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="node_modules/angular/angular.min.js"></script>
-        <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <!-- <script src="js/main.js"></script> -->
+        <script src="app/dashboard.module.js"></script>
+        <script src="app/dashboard.route.js"></script>
+        <script src="app/home/home.controller.js"></script>
+        <script src="app/menu/menu.controller.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

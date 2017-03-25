@@ -15,19 +15,33 @@ function routeProvider($stateProvider, $urlRouterProvider) {
       url: '/',
       views: {
         '': {
-          templateUrl: 'app/home/home.html'
+          templateUrl: 'app/home/home.html',
+          controller: 'HomeCtrl',
+          controllerAs: 'homeCtrl'
         },
         'header@home': {
           templateUrl: 'templates/header.html'
         },
-        'body@home': {
-          controller: 'PageCtrl',
-          templateUrl: 'templates/body.html'
+        'leftpanel@home': {
+          templateUrl: 'app/home/leftpanel/leftpanel.html',
+          controller: 'LeftpanelCtrl',
+          controllerAs: 'leftpanelCtrl'
+        },
+        '@home': {
+          templateUrl: 'templates/welcome.html'
         },
         'footer@home': {
           templateUrl: 'templates/footer.html'
         }
       }
+    })
+    .state('home.admin', {
+      url: 'admin',
+      templateUrl: 'templates/administration.html'
+    })
+    .state('home.dashboard', {
+      url: 'dashboard',
+      templateUrl: 'templates/dashboard.html'
     });
 }
 

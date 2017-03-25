@@ -4,11 +4,13 @@
 /**
 * Controls all other Pages
 */
-angular.module('dashboard').controller('PageCtrl', PageController);
+angular.module('dashboard').controller('HomeCtrl', HomeController);
 
 
-function PageController() {
-  console.log("Page Controller reporting for duty.");
+function HomeController() {
+
+  var vm = this;
+  console.log("Home Controller reporting for duty.");
 }
 
 })();

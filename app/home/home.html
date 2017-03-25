@@ -1,8 +1,10 @@
 <div id="wrapper">
   <div ui-view='header'></div>
+  <div ui-view='leftpanel'></div>
   <div id="page-wrapper">
-    <h1 class="text-center">This content is in home.html</h1>
-    <div ui-view='body'></div>
+    <div ui-view></div>
   </div>
-  <div ui-view='footer'></div>
+  <div id="page-footer">
+    <div ui-view='footer'></div>
+  </div>
 </div>

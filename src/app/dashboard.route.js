@@ -15,7 +15,7 @@
                 url: '/',
                 views: {
                     '': {
-                        templateUrl: 'app/home/home.html',
+                        templateUrl: 'src/app/home/home.html',
                         controller: 'HomeCtrl',
                         controllerAs: 'homeCtrl'
                     },
@@ -23,7 +23,7 @@
                         templateUrl: 'templates/header.html'
                     },
                     'leftpanel@home': {
-                        templateUrl: 'app/home/leftpanel/leftpanel.html',
+                        templateUrl: 'src/app/home/leftpanel/leftpanel.html',
                         controller: 'LeftpanelCtrl',
                         controllerAs: 'leftpanelCtrl'
                     },

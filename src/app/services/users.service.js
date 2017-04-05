@@ -1,15 +1,27 @@
 (function() {
-    angular.module('dashboard.services', []).factory('User', userService);
+    angular.module('dashboard.services', ['ngResource']).factory('userService', userService);
 
     userService.$inject = ['$resource'];
 
     function userService($resource) {
-        return $resource('src/api/users/:id', {
+
+        var User = $resource('src/api/users/:id', {
             id: '@_id'
         }, {
             update: {
                 method: 'PUT'
             }
         });
+
+        var service = {
+            getAll: getAll
+        };
+
+        return service;
+
+        function getAll() {
+
+            return User.query().$promise;
+        }
     }
 })();

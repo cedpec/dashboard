@@ -4,6 +4,6 @@
     /**
      * Dashboard AngularJS module
      */
-    angular.module('dashboard', ['ui.router', 'ngResource', 'dashboard.services']);
+    angular.module('dashboard', ['ui.router', 'dashboard.services']);
 
 })();

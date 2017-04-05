@@ -6,15 +6,16 @@
      */
     angular.module('dashboard').controller('HomeCtrl', HomeController);
 
-    HomeController.$inject = ['User']
+    HomeController.$inject = ['userService']
 
-    function HomeController(User) {
+    function HomeController(userService) {
 
         var vm = this;
         console.log("Home Controller reporting for duty.");
 
-        vm.users = User.query();
+        userService.getAll().then(function(response) {
 
-        console.log(vm.users);
+            vm.users = response;
+        });
     }
 })();
